@@ -13,9 +13,12 @@ client.on('message', msg => {
   const task = commands[command];
 
   if (!task) return;
-
-  if (task) {
+  
+  try{
     task(msg, args);
+  } catch (error) {
+    console.error(error);
+    msg.reply('500 Internal bot error with command. Check the logs fam.');
   }
 });
 
