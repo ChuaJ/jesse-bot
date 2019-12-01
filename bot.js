@@ -18,7 +18,7 @@ client.on('message', msg => {
     task(msg, args);
   } catch (error) {
     console.error(error);
-    msg.reply('500 Internal bot error with command. Check the logs fam.')
+    msg.reply('500 Internal bot error with command. Check the logs fam.');
   }
 });
 
